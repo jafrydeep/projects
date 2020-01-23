@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="690.0" prefWidth="970.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="librarymgt.ReturnBookController">
+   <children>
+      <AnchorPane prefHeight="115.0" prefWidth="970.0" style="-fx-background-color: #0A0A2A;">
+         <children>
+            <ImageView fitHeight="84.0" fitWidth="257.0" layoutX="14.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/library-management-system-logo-png-8.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="859.0" layoutY="29.0" mnemonicParsing="false" onAction="#onLogoutAction" prefHeight="51.0" prefWidth="89.0" style="-fx-background-color: #0A0A2A; -fx-border-color: #FF0000;" text="Log Out" textFill="RED">
+               <font>
+                  <Font name="Comic Sans MS" size="17.0" />
+               </font>
+            </Button>
+            <Button layoutX="758.0" layoutY="29.0" mnemonicParsing="false" onAction="#onHomeAction" prefHeight="51.0" prefWidth="89.0" style="-fx-background-color: #0A0A2A; -fx-border-color: #1CF427;" text="Home" textFill="#00ff51">
+               <font>
+                  <Font name="Comic Sans MS" size="17.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutY="117.0" prefHeight="576.0" prefWidth="970.0" style="-fx-background-color: #ffffff;">
+         <children>
+            <TabPane layoutY="-2.0" prefHeight="576.0" prefWidth="970.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab text="Return Books ">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TableView fx:id="iTable" layoutX="64.0" layoutY="126.0" onMouseClicked="#clickAction" prefHeight="367.0" prefWidth="524.0">
+                                <columns>
+                                  <TableColumn fx:id="sId" prefWidth="64.0" text="ID" />
+                                  <TableColumn fx:id="sName" prefWidth="142.0" text="Name" />
+                                    <TableColumn fx:id="bId" prefWidth="98.0" text="Book ID" />
+                                    <TableColumn fx:id="bname" prefWidth="114.0" text="Book Name" />
+                                    <TableColumn fx:id="iDate" prefWidth="105.0" text="Issue Date" />
+                                </columns>
+                              </TableView>
+                              <TextField fx:id="searchh" alignment="CENTER" layoutX="226.0" layoutY="63.0" onKeyTyped="#typeAction" prefHeight="25.0" prefWidth="201.0" promptText="Search Student ID" />
+                              <AnchorPane layoutX="604.0" layoutY="88.0" prefHeight="412.0" prefWidth="352.0">
+                                 <children>
+                                    <Text fill="#089357" layoutX="43.0" layoutY="107.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID :">
+                                       <font>
+                                          <Font name="Ebrima Bold" size="13.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fill="#089357" layoutX="41.0" layoutY="150.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name :" wrappingWidth="59.70703125">
+                                       <font>
+                                          <Font name="Ebrima Bold" size="13.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fill="#089357" layoutX="39.0" layoutY="189.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Book ID :" wrappingWidth="101.70703125">
+                                       <font>
+                                          <Font name="Ebrima Bold" size="13.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fill="#089357" layoutX="41.0" layoutY="228.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Book Name :" wrappingWidth="82.70703125">
+                                       <font>
+                                          <Font name="Ebrima Bold" size="13.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fill="#089357" layoutX="43.0" layoutY="268.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Issue Date :" wrappingWidth="78.70703125">
+                                       <font>
+                                          <Font name="Ebrima Bold" size="13.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fx:id="s1" fill="#ab01a0" layoutX="148.0" layoutY="114.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="180.61181640625">
+                                       <font>
+                                          <Font name="Ebrima Bold" size="13.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fx:id="s2" fill="#ab01a0" layoutX="151.0" layoutY="149.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="174.61181640625">
+                                       <font>
+                                          <Font name="Ebrima Bold" size="13.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fx:id="s3" fill="#ab01a0" layoutX="145.0" layoutY="188.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="186.61181640625">
+                                       <font>
+                                          <Font name="Ebrima Bold" size="13.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fx:id="s4" fill="#ab01a0" layoutX="152.0" layoutY="227.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="172.61181640625">
+                                       <font>
+                                          <Font name="Ebrima Bold" size="13.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fx:id="s5" fill="#ab01a0" layoutX="171.0" layoutY="267.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="156.61181640625">
+                                       <font>
+                                          <Font name="Ebrima Bold" size="13.0" />
+                                       </font>
+                                    </Text>
+                                    <Button layoutX="239.0" layoutY="321.0" mnemonicParsing="false" onAction="#onReturnAction" prefHeight="25.0" prefWidth="89.0" style="-fx-background-color: #089357; -fx-border-color: #089357;" text="Return" textAlignment="CENTER" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Button>
+                                    <Button layoutX="186.0" layoutY="321.0" mnemonicParsing="false" onAction="#onResetAction" style="-fx-background-color: #ff0000; -fx-border-color: #ff0000;" text="Reset" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Button>
+                                    <Text fx:id="ret" fill="#089357" layoutX="85.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0">
+                                       <font>
+                                          <Font name="Ebrima Bold" size="19.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                <Tab text="Records">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TableView fx:id="iTable111" layoutX="118.0" layoutY="90.0" onMouseClicked="#clickAction" prefHeight="367.0" prefWidth="734.0">
+                                 <columns>
+                                    <TableColumn fx:id="sId11" prefWidth="76.0" text="ID" />
+                                    <TableColumn fx:id="sName11" prefWidth="130.0" text="Name" />
+                                    <TableColumn fx:id="bId11" prefWidth="117.0" text="Book ID" />
+                                    <TableColumn fx:id="bname11" prefWidth="107.0" text="Book Name" />
+                                    <TableColumn fx:id="iDate11" prefWidth="93.0" text="Type" />
+                                    <TableColumn fx:id="ii1" prefWidth="104.0" text="Issue Date" />
+                                    <TableColumn fx:id="rr1" prefWidth="106.0" text="Return Date" />
+                                 </columns>
+                              </TableView>
+                           </children></AnchorPane>
+                  </content>
+                </Tab>
+              </tabs>
+            </TabPane>
+         </children></AnchorPane>
+   </children>
+</AnchorPane>
