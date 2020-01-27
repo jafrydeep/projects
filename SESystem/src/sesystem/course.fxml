@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="551.0" prefWidth="724.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sesystem.CourseController">
+    <stylesheets>
+        <URL value="@course.css" />
+    </stylesheets>
+   <children>
+      <AnchorPane prefHeight="145.0" prefWidth="734.0" style="-fx-background-color: #2C3E50;">
+         <children>
+            <ImageView fitHeight="71.0" fitWidth="314.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/ses.png" />
+               </image>
+            </ImageView>
+            <Text layoutX="14.0" layoutY="122.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: #89C4F4;" text="Students Enrollment System">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="23.0" />
+               </font>
+            </Text>
+            <Button layoutX="623.0" layoutY="96.0" mnemonicParsing="false" onAction="#homeAction" prefHeight="35.0" prefWidth="97.0" style="-fx-background-color: #2C3E50; -fx-border-color: #913D88;" text="Home Page" textAlignment="CENTER" textFill="#35ff32">
+               <font>
+                  <Font name="Arial Black" size="12.0" />
+               </font>
+            </Button>
+            <Button layoutX="570.0" layoutY="50.0" mnemonicParsing="false" onAction="#CRAction" prefHeight="35.0" prefWidth="150.0" style="-fx-background-color: #2C3E50; -fx-border-color: #913D88;" text="Course Register" textAlignment="CENTER" textFill="#f8cbce">
+               <font>
+                  <Font name="Arial Black" size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <TabPane layoutY="145.0" prefHeight="406.0" prefWidth="734.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab style="-fx-background-color: #913D88;" text="Add Course">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #ECF0F1;">
+                     <children>
+                        <TextField fx:id="cCode" alignment="CENTER" layoutX="256.0" layoutY="50.0" prefHeight="35.0" prefWidth="216.0" promptText="Course Code" style="-fx-background-color: #ECF0F1;">
+                           <font>
+                              <Font name="Constantia Bold Italic" size="19.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="cName" alignment="CENTER" layoutX="257.0" layoutY="105.0" prefHeight="35.0" prefWidth="216.0" promptText="Course Title" style="-fx-background-color: #ECF0F1;">
+                           <font>
+                              <Font name="Constantia Bold Italic" size="19.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="cSec" alignment="CENTER" layoutX="257.0" layoutY="160.0" prefHeight="35.0" prefWidth="216.0" promptText="Course Section" style="-fx-background-color: #ECF0F1;">
+                           <font>
+                              <Font name="Constantia Bold Italic" size="19.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="cCredit" alignment="CENTER" layoutX="257.0" layoutY="215.0" prefHeight="35.0" prefWidth="216.0" promptText="Course Credit" style="-fx-background-color: #ECF0F1;">
+                           <font>
+                              <Font name="Constantia Bold Italic" size="19.0" />
+                           </font>
+                        </TextField>
+                        <Button layoutX="374.0" layoutY="285.0" mnemonicParsing="false" onAction="#AddAction" prefHeight="35.0" prefWidth="77.0" style="-fx-background-color: #26C281;" text="ADD" textAlignment="CENTER" textFill="#0a0403">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="292.0" layoutY="285.0" mnemonicParsing="false" onAction="#resetAction" prefHeight="35.0" prefWidth="59.0" style="-fx-background-color: #D91E18;" text="Reset" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <Separator layoutX="221.0" layoutY="91.0" prefHeight="1.0" prefWidth="300.0" />
+                        <Separator layoutX="221.0" layoutY="147.0" prefHeight="1.0" prefWidth="300.0" />
+                        <Separator layoutX="221.0" layoutY="202.0" prefHeight="1.0" prefWidth="300.0" />
+                        <Separator layoutX="221.0" layoutY="258.0" prefHeight="3.0" prefWidth="300.0" />
+                        <Text fx:id="scAdd" fill="#268a35" layoutX="508.0" layoutY="171.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="192.884765625">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab style="-fx-background-color: #446CB3;" text="Course List">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #ECF0F1;">
+                     <children>
+                        <TableView fx:id="courseView" layoutX="83.0" layoutY="48.0" prefHeight="281.0" prefWidth="569.0" style="-fx-border-color: #6BB9F0;">
+                          <columns>
+                            <TableColumn fx:id="cCodd" prefWidth="124.0" text="Course Code" />
+                            <TableColumn fx:id="cTit" prefWidth="231.0" text="Course Title" />
+                              <TableColumn fx:id="cSeec" prefWidth="118.0" text="Course Section" />
+                              <TableColumn fx:id="cCrd" prefWidth="94.0" text="Course Credit" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

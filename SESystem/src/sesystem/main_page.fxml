@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="551.0" prefWidth="724.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sesystem.Main_pageController">
+    <stylesheets>
+        <URL value="@main_page.css" />
+    </stylesheets>
+   <children>
+      <AnchorPane prefHeight="145.0" prefWidth="734.0" style="-fx-background-color: #2C3E50;">
+         <children>
+            <ImageView fitHeight="71.0" fitWidth="314.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/ses.png" />
+               </image>
+            </ImageView>
+            <Text layoutX="14.0" layoutY="122.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: #89C4F4;" text="Students Enrollment System">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="23.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="176.0" layoutY="190.0" prefHeight="136.0" prefWidth="173.0" style="-fx-background-color: #89C4F4;">
+         <children>
+            <Button mnemonicParsing="false" onAction="#studentAction" prefHeight="136.0" prefWidth="173.0" style="-fx-background-color: #89C4F4;">
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </Button>
+            <ImageView fitHeight="71.0" fitWidth="67.0" layoutX="53.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/student.png" />
+               </image>
+            </ImageView>
+            <Text fill="#5b1313" layoutX="12.0" layoutY="109.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add/View Students" textAlignment="CENTER">
+               <font>
+                  <Font name="Comic Sans MS Bold" size="16.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="386.0" layoutY="190.0" prefHeight="136.0" prefWidth="173.0" style="-fx-background-color: #89C4F4;">
+         <children>
+            <Button mnemonicParsing="false" onAction="#courseAction" prefHeight="136.0" prefWidth="173.0" style="-fx-background-color: #89C4F4;">
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </Button>
+            <ImageView fitHeight="80.0" fitWidth="67.0" layoutX="53.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/course.png" />
+               </image>
+            </ImageView>
+            <Text fill="#5b1313" layoutX="18.0" layoutY="108.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add/View Courses" textAlignment="CENTER" wrappingWidth="140.79687779396772">
+               <font>
+                  <Font name="Comic Sans MS Bold" size="16.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="386.0" layoutY="357.0" prefHeight="136.0" prefWidth="173.0" style="-fx-background-color: #89C4F4;">
+         <children>
+            <Button mnemonicParsing="false" onAction="#examButtonAction" prefHeight="136.0" prefWidth="173.0" style="-fx-background-color: #89C4F4;">
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </Button>
+            <ImageView fitHeight="82.0" fitWidth="67.0" layoutX="53.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/exam.png" />
+               </image></ImageView>
+            <Text fill="#5b1313" layoutX="66.0" layoutY="108.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Exam" textAlignment="CENTER">
+               <font>
+                  <Font name="Comic Sans MS Bold" size="16.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="176.0" layoutY="357.0" prefHeight="136.0" prefWidth="173.0" style="-fx-background-color: #89C4F4;">
+         <children>
+            <Button layoutY="1.0" mnemonicParsing="false" onAction="#deptAction" prefHeight="136.0" prefWidth="173.0" style="-fx-background-color: #89C4F4;">
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </Button>
+            <ImageView fitHeight="71.0" fitWidth="67.0" layoutX="53.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/cr.png" />
+               </image></ImageView>
+            <Text fill="#5b1313" layoutX="25.0" layoutY="109.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Course Register" textAlignment="CENTER">
+               <font>
+                  <Font name="Comic Sans MS Bold" size="16.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

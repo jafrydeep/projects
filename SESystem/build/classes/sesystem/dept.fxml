@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="551.0" prefWidth="724.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.111" fx:controller="sesystem.DeptController">
+    <stylesheets>
+        <URL value="@dept.css" />
+    </stylesheets>
+   <children>
+      <AnchorPane layoutY="-1.0" prefHeight="146.0" prefWidth="725.0" style="-fx-background-color: #2C3E50;">
+         <children>
+            <ImageView fitHeight="71.0" fitWidth="314.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/ses.png" />
+               </image>
+            </ImageView>
+            <Text layoutX="14.0" layoutY="122.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: #89C4F4;" text="Students Enrollment System">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="23.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="119.0" fitWidth="143.0" layoutX="590.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/stdnt.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="419.0" layoutY="97.0" mnemonicParsing="false" onAction="#homeAction" prefHeight="34.0" prefWidth="119.0" style="-fx-background-color: #2C3E50; -fx-border-color: #913D88;" text="Home Page" textFill="#35ff32">
+               <font>
+                  <Font name="Arial Black" size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <TextField fx:id="did" layoutX="150.0" layoutY="219.0" prefHeight="35.0" prefWidth="148.0" />
+      <TextField fx:id="dname" layoutX="150.0" layoutY="273.0" prefHeight="35.0" prefWidth="148.0" />
+      <TextField fx:id="dloc" layoutX="150.0" layoutY="331.0" prefHeight="35.0" prefWidth="148.0" />
+      <Text fill="#004396" layoutX="62.0" layoutY="242.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dept ID :" underline="true">
+         <font>
+            <Font name="Century" size="15.0" />
+         </font>
+      </Text>
+      <Text fill="#004396" layoutX="62.0" layoutY="296.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DName :">
+         <font>
+            <Font name="Century" size="15.0" />
+         </font>
+      </Text>
+      <Text fill="#004396" layoutX="62.0" layoutY="354.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Location :" wrappingWidth="87.52441927790642">
+         <font>
+            <Font name="Century" size="15.0" />
+         </font>
+      </Text>
+      <Text fill="#004396" layoutX="62.0" layoutY="410.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Phone :" wrappingWidth="87.52441927790642">
+         <font>
+            <Font name="Century" size="15.0" />
+         </font>
+      </Text>
+      <TextField fx:id="dphn" layoutX="150.0" layoutY="387.0" prefHeight="35.0" prefWidth="148.0" />
+      <Button layoutX="210.0" layoutY="452.0" mnemonicParsing="false" onAction="#addAction" prefHeight="27.0" prefWidth="88.0" style="-fx-background-color: #663399;" text="ADD" textFill="#3bfcff">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="150.0" layoutY="452.0" mnemonicParsing="false" onAction="#resetAction" prefHeight="27.0" prefWidth="46.0" style="-fx-background-color: #BF55EC;" text="Reset" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="11.0" />
+         </font>
+      </Button>
+      <TableView fx:id="dTableView" layoutX="363.0" layoutY="187.0" prefHeight="324.0" prefWidth="331.0">
+        <columns>
+          <TableColumn fx:id="dIdd" prefWidth="62.0" text="Dept ID" />
+          <TableColumn fx:id="dNamee" prefWidth="101.0" text="D-Name" />
+            <TableColumn fx:id="dLocc" prefWidth="84.0" text="Address" />
+            <TableColumn fx:id="dPhnn" prefWidth="82.0" text="Contact" />
+        </columns>
+      </TableView>
+      <Text fx:id="scAdd" fill="#b00000" layoutX="106.0" layoutY="183.0" strokeType="OUTSIDE" strokeWidth="0.0">
+         <font>
+            <Font name="Cambria Bold Italic" size="17.0" />
+         </font>
+      </Text>
+      <Text fx:id="scErr" fill="#b90a0a" layoutX="61.0" layoutY="472.0" strokeType="OUTSIDE" strokeWidth="0.0">
+         <font>
+            <Font name="Cambria Bold Italic" size="17.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>
